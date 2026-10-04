@@ -38,45 +38,108 @@
     <section class="section-grid prose-section">
       <div class="section-heading"><h2>Selected projects</h2></div>
       <div class="section-body">
-        <article class="project" id="project-clara">
-          <div class="project-heading"><h3>Understanding hateful video</h3><span class="date">2024 &ndash; present</span></div>
-          <p class="project-subtitle">DeHate &amp; CLARA &middot; Multimodal learning</p>
-          <p>I led and contributed to the construction and release of DeHate, from data collection and annotation design to annotator training and quality control. My modelling work combines video, speech, and text to capture hateful content at the clip level.</p>
-          <figure class="research-figure">
-            <a href="../assets/clara-framework.png" target="_blank" rel="noopener" aria-label="Open the CLARA framework figure"><img src="../assets/clara-framework.png" width="2400" height="821" alt="CLARA architecture showing multimodal clip encoding, local-global contrastive learning, and rationale-guided video aggregation" loading="lazy"></a>
-            <figcaption>CLARA: clip-level multimodal alignment with VLM-derived rationales.</figcaption>
-          </figure>
-          <div class="resource-links"><a href="https://yuchenzhang-1.github.io/CLARA/">CLARA project <i data-lucide="arrow-up-right" aria-hidden="true"></i></a><a href="https://github.com/yuchenzhang-1/CLARA">Code <i data-lucide="arrow-up-right" aria-hidden="true"></i></a><a href="https://github.com/yuchen-zhang-essex/DeHate">DeHate dataset <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div>
-          <details><summary>Dataset development</summary><div class="detail-content"><p>DeHate contains 6,689 videos with annotations for explicit and implicit hate, contributing modalities, and temporal segments. I helped define annotation guidelines, recruited and trained annotators, calibrated annotations, and checked data quality.</p><figure class="research-figure"><img src="../assets/dehate-modalities.png" width="1400" height="534" alt="DeHate dataset figure comparing the contribution of visual, audio, and text modalities to explicit and implicit hate" loading="lazy"><figcaption>Modality composition in the DeHate dataset.</figcaption></figure></div></details>
-        </article>
-
         <article class="project" id="project-eloquence">
-          <div class="project-heading"><h3>Speech and feedback for conversational AI</h3><span class="date">2024 &ndash; present</span></div>
+          <div class="project-heading"><h3>SpeechLLM for Conversational AI</h3><span class="date">2024 &ndash; present</span></div>
           <p class="project-subtitle">ELOQUENCE &middot; Horizon Europe</p>
-          <p>I develop a Python pipeline and Web API for collecting human feedback during conversations with LLMs, alongside research on feedback-based model adaptation. I also design lightweight modules that extend text-based LLMs to multilingual speech recognition and understanding.</p>
-          <details><summary>Research and collaboration</summary><div class="detail-content"><p>The work includes cross-modal representation alignment, parameter-efficient adaptation, and coordination of partner contributions across two Essex-led tasks. ELOQUENCE brings together 16 partners across 10 countries.</p></div></details>
-          <div class="resource-links"><a href="https://eloquenceai.eu/">ELOQUENCE <i data-lucide="arrow-up-right" aria-hidden="true"></i></a><a href="https://arxiv.org/abs/2601.18899">Language Family Matters <i data-lucide="arrow-up-right" aria-hidden="true"></i></a><a href="https://github.com/yuchen-zhang-essex/Context-Aware_ASR">Speak in Context repository <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div>
+          <p>ELOQUENCE is a multinational research programme involving 16 academic and industry partners across 10 countries. I contribute to two Essex-led tasks spanning human feedback for conversational systems and multimodal adaptation of language models.</p>
+
+          <section class="project-work">
+            <h4>Automated human feedback collection</h4>
+            <p>I lead research on a Python pipeline and Web API that identify feedback signals during user-LLM interactions, steer targeted follow-up questions, and capture the resulting feedback. The collected interactions support subsequent reinforcement-learning-based adaptation of conversational models.</p>
+          </section>
+
+          <section class="project-work">
+            <h4>Multilingual multimodal SpeechLLMs</h4>
+            <p>I develop lightweight modules that extend text-based LLMs to multilingual speech recognition and understanding. The work centres on cross-modal representation alignment, parameter-efficient adaptation, and transfer across languages, domains, and speech tasks.</p>
+            <figure class="research-figure">
+              <a href="../assets/speechllm-framework.png" target="_blank" rel="noopener" aria-label="Open the SpeechLLM framework figure"><img src="../assets/speechllm-framework.png" width="1800" height="1302" alt="SpeechLLM framework aligning speech and contextual representations through a trainable speech connector and contrastive learning" loading="lazy"></a>
+              <figcaption>Speech-context alignment for adapting a frozen text LLM to multilingual speech tasks.</figcaption>
+            </figure>
+          </section>
+
+          <div class="resource-links"><a href="https://eloquenceai.eu/">ELOQUENCE <i data-lucide="arrow-up-right" aria-hidden="true"></i></a><a href="https://arxiv.org/abs/2601.18899">Language Family Matters <i data-lucide="arrow-up-right" aria-hidden="true"></i></a><a href="https://github.com/yuchen-zhang-essex/Context-Aware_ASR">Speak in Context <i data-lucide="arrow-up-right" aria-hidden="true"></i></a><a href="https://scholar.google.com.au/citations?view_op=view_citation&amp;hl=en&amp;user=mACVkPIAAAAJ&amp;sortby=pubdate&amp;citation_for_view=mACVkPIAAAAJ:8k81kl-MbHgC">CARD <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div>
         </article>
 
-        <article class="project" id="project-standards">
-          <div class="project-heading"><h3>Knowledge extraction from engineering documents</h3><span class="date">2021</span></div>
-          <p class="project-subtitle">Industry collaboration &middot; Knowledge graphs</p>
-          <p>I led a team of three PhD and six master's students working with China Communications Construction Second Harbor Engineering Company Ltd. We extracted and organised knowledge from construction standards and technical documents.</p>
-          <details><summary>Technical contribution</summary><div class="detail-content"><p>Text mining, named entity recognition, and relation extraction identified engineering concepts and requirements. A knowledge graph in Neo4j organised the extracted knowledge for retrieval in bridge construction.</p></div></details>
+        <article class="project" id="project-hateful-video">
+          <div class="project-heading"><h3>Hateful Video Detection</h3><span class="date">2024 &ndash; present</span></div>
+          <p class="project-subtitle">Dataset development &middot; Multimodal video understanding</p>
+
+          <section class="project-work">
+            <h4>DeHate dataset</h4>
+            <p>I led and contributed to the construction and release of DeHate, covering data collection, annotation guideline design, annotator recruitment and training, annotation calibration, and quality control. The dataset contains 6,689 videos annotated for explicit and implicit hate, contributing modalities, and temporal segments.</p>
+            <figure class="research-figure">
+              <a href="../assets/dehate-modalities.png" target="_blank" rel="noopener" aria-label="Open the DeHate modality figure"><img src="../assets/dehate-modalities.png" width="1400" height="534" alt="DeHate dataset figure comparing visual, audio, and text contributions to explicit and implicit hate" loading="lazy"></a>
+              <figcaption>Visual, audio, and text contributions represented in the DeHate dataset.</figcaption>
+            </figure>
+            <div class="resource-links"><a href="https://github.com/yuchen-zhang-essex/DeHate">Dataset and documentation <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div>
+          </section>
+
+          <section class="project-work">
+            <h4>CLARA</h4>
+            <p>CLARA moves beyond whole-video classification to identify hateful content at the clip level. It combines visual, audio, and textual evidence with local-global contrastive alignment and VLM-derived rationales, producing both video-level decisions and temporally grounded predictions.</p>
+            <figure class="research-figure">
+              <a href="../assets/clara-framework.png" target="_blank" rel="noopener" aria-label="Open the CLARA framework figure"><img src="../assets/clara-framework.png" width="2400" height="821" alt="CLARA architecture showing multimodal clip encoding, local-global contrastive learning, and rationale-guided video aggregation" loading="lazy"></a>
+              <figcaption>CLARA: clip-level multimodal alignment with VLM-derived rationales.</figcaption>
+            </figure>
+            <div class="resource-links"><a href="https://yuchenzhang-1.github.io/CLARA/">Project page <i data-lucide="arrow-up-right" aria-hidden="true"></i></a><a href="https://github.com/yuchenzhang-1/CLARA">Code <i data-lucide="arrow-up-right" aria-hidden="true"></i></a><a href="https://arxiv.org/abs/2608.15905">Paper <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div>
+          </section>
         </article>
 
         <article class="project" id="project-fakenews">
-          <div class="project-heading"><h3>Graph learning for fake news detection</h3><span class="date">2022 &ndash; 2024</span></div>
-          <p class="project-subtitle">Social media mining &middot; Knowledge-enhanced AI</p>
-          <p>I collected and analysed more than one million tweets, extracting topics, entities, facts, emotions, and relationships. I developed graph neural network and LLM-enhanced approaches that use contextual information and external knowledge to inform predictions.</p>
-          <div class="resource-links"><a href="https://arxiv.org/abs/2404.13192">HeteroSGT paper <i data-lucide="arrow-up-right" aria-hidden="true"></i></a><a href="https://aclanthology.org/2024.emnlp-main.31/">LLM-enhanced semantics <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div>
+          <div class="project-heading"><h3>Fake News Detection</h3><span class="date">2022 &ndash; 2024</span></div>
+          <p class="project-subtitle">Social media mining &middot; Graph learning &middot; Knowledge-enhanced AI</p>
+          <p>I collected and analysed more than one million tweets, extracting topics, entities, facts, emotions, and relationships to study information propagation and support fake news detection. The following projects explore complementary ways to organise and model these signals.</p>
+
+          <section class="project-work">
+            <h4>HeteroSGT</h4>
+            <p>HeteroSGT links news articles, named entities, and topics in a heterogeneous graph. Random walks extract a local subgraph around each article, while a subgraph Transformer combines this relational structure with word- and sentence-level representations to predict authenticity.</p>
+            <figure class="research-figure">
+              <a href="../assets/heterosgt-framework.png" target="_blank" rel="noopener" aria-label="Open the HeteroSGT framework figure"><img src="../assets/heterosgt-framework.png" width="1215" height="355" alt="HeteroSGT framework combining textual encoding, heterogeneous subgraph sampling, and a subgraph Transformer for fake news detection" loading="lazy"></a>
+              <figcaption>HeteroSGT: textual modelling, heterogeneous subgraph sampling, and Transformer-based classification.</figcaption>
+            </figure>
+            <div class="resource-links"><a href="https://scholar.google.com.au/citations?view_op=view_citation&amp;hl=en&amp;user=mACVkPIAAAAJ&amp;sortby=pubdate&amp;citation_for_view=mACVkPIAAAAJ:qjMakFHDy7sC">Paper <i data-lucide="arrow-up-right" aria-hidden="true"></i></a><a href="https://github.com/whatthebrett/hetersgt">Code <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div>
+          </section>
+
+          <section class="project-work">
+            <h4>LESS4FD</h4>
+            <p>LESS4FD prompts LLMs to identify entities and uses LLM-derived representations with topic modelling to construct a news-entity-topic graph. It then mines local and global semantics through adaptive propagation and consistency learning, including information from unlabelled articles.</p>
+            <figure class="research-figure research-figure-narrow">
+              <a href="../assets/less4fd-framework.png" target="_blank" rel="noopener" aria-label="Open the LESS4FD framework figure"><img src="../assets/less4fd-framework.png" width="510" height="420" alt="LESS4FD framework using LLM-derived news, entity, and topic representations to construct a heterogeneous graph" loading="lazy"></a>
+              <figcaption>LESS4FD: LLM-enhanced entity and topic modelling for heterogeneous graph construction.</figcaption>
+            </figure>
+            <div class="resource-links"><a href="https://scholar.google.com.au/citations?view_op=view_citation&amp;hl=en&amp;user=mACVkPIAAAAJ&amp;sortby=pubdate&amp;citation_for_view=mACVkPIAAAAJ:UeHWp8X0CEIC">Paper <i data-lucide="arrow-up-right" aria-hidden="true"></i></a><a href="https://aclanthology.org/2024.emnlp-main.31/">ACL Anthology <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div>
+          </section>
+
+          <section class="project-work">
+            <h4>EmoKnow</h4>
+            <p>EmoKnow addresses COVID-19 misinformation by combining contextual language representations, emotion signals, and external factual knowledge. These complementary views are fused into a shared representation for classifying news when social-context information is unavailable or unreliable.</p>
+            <div class="method-diagram" role="img" aria-label="Conceptual flow of EmoKnow from news content through language, emotion, and external knowledge representations to feature fusion and fake news prediction">
+              <div class="method-node method-node-input">News content</div>
+              <div class="method-branches">
+                <div class="method-node">Language representation</div>
+                <div class="method-node">Emotion features</div>
+                <div class="method-node">External knowledge</div>
+              </div>
+              <div class="method-node method-node-fusion">Feature fusion</div>
+              <div class="method-node method-node-output">Fake news prediction</div>
+            </div>
+            <p class="diagram-caption">Conceptual summary of EmoKnow's language, emotion, and knowledge components.</p>
+            <div class="resource-links"><a href="https://scholar.google.com.au/citations?view_op=view_citation&amp;hl=en&amp;user=mACVkPIAAAAJ&amp;sortby=pubdate&amp;citation_for_view=mACVkPIAAAAJ:9yKSN-GCB0IC">Paper <i data-lucide="arrow-up-right" aria-hidden="true"></i></a><a href="https://doi.org/10.1007/978-3-031-46661-8_24">DOI <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div>
+          </section>
+        </article>
+
+        <article class="project" id="project-standards">
+          <div class="project-heading"><h3>Knowledge Extraction from Engineering Documents</h3><span class="date">2021</span></div>
+          <p class="project-subtitle">Industry collaboration &middot; Knowledge graphs</p>
+          <p>I led a team of three PhD and six master's students working with China Communications Construction Second Harbor Engineering Company Ltd. We applied text mining, named entity recognition, and relation extraction to identify engineering concepts and requirements in construction standards and technical documents.</p>
+          <p>The extracted knowledge was organised in a Neo4j knowledge graph, enabling engineers to query related provisions and retrieve connected technical requirements for bridge construction.</p>
         </article>
 
         <article class="project" id="project-clinical">
-          <div class="project-heading"><h3>A clinical knowledge graph for diabetes management</h3><span class="date">2020</span></div>
+          <div class="project-heading"><h3>A Clinical Knowledge Graph for Diabetes Management</h3><span class="date">2020</span></div>
           <p class="project-subtitle">Clinical collaboration &middot; Information extraction</p>
           <p>I led the development and deployment of a diabetes knowledge graph using electronic health records and clinical knowledge, defining the relationship schema and using rule-based matching and semantic analysis to extract and normalise clinical information.</p>
-          <details><summary>Clinical collaboration</summary><div class="detail-content"><p>I worked with doctors and patients from Guizhou Medical University Affiliated Hospital and Taipei Medical University Hospital on applying the knowledge graph to diabetes management.</p></div></details>
+          <p>I worked with doctors and patients from Guizhou Medical University Affiliated Hospital and Taipei Medical University Hospital to apply the knowledge graph to diabetes management in elderly care.</p>
         </article>
       </div>
     </section>
